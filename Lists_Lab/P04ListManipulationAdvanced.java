@@ -33,15 +33,12 @@ public class P04ListManipulationAdvanced {
         String[] input = command.split(" ");
         int number = Integer.parseInt(input[1]);
 
-        for (int i = 0; i < numbers.size(); i++) {
-            int num = (int) numbers.get(i);
-            if (number == num) {
-                System.out.println("Yes");
-                return;
-            }
-
+        if (numbers.contains(number)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No such number");
         }
-        System.out.println("No such number");
+
     }
     public static void printOddOrEven (List numbers, String command) {
         String[] input = command.split(" ");
